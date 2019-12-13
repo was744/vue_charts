@@ -34,6 +34,11 @@ var vm2 = new Vue({
   }
 })
 
+// table
+var vm3 = new Vue({
+  el: '#table'
+})
+
 var ctx = document.getElementById('testLine').getContext('2d');
 var chart = new Chart(ctx, {
     // The type of chart we want to create

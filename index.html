@@ -32,7 +32,9 @@
             </b-navbar>
         </div>
 
-        <br>
+        <div id="table">
+            <b-table striped hover :items="parrots"></b-table>
+        </div>
 
         <div id="app">
             {{ message }}
@@ -43,6 +45,8 @@
                 {{ parrot.name }}
             </li>
         </ul>
+
+
 
         <!-- chart -->
         <canvas id="testLine"></canvas>
