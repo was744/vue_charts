@@ -1,9 +1,35 @@
+// test view
 var app = new Vue({
     el: '#app',
     data: {
       message: 'Polly want a cracker!'
     }
   })
+
+// Navbar
+var vm1 = new Vue({
+  el: '#nav',
+  data: {
+    title: 'Pollys Parrots'
+  }
+})
+
+// list
+var vm2 = new Vue({
+  el: '#inv-list',
+  data: {
+    parrots: [
+      {
+        name: 'Polly',
+        color: 'blue'
+      },
+      {
+        name: 'Pete',
+        color: 'pink'
+      }
+    ]
+  }
+})
 
 var ctx = document.getElementById('testLine').getContext('2d');
 var chart = new Chart(ctx, {
