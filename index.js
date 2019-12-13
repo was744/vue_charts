@@ -1,3 +1,15 @@
+// init data
+var parrots =  [
+  {
+    name: 'Polly',
+    color: 'blue'
+  },
+  {
+    name: 'Pete',
+    color: 'pink'
+  }
+]
+
 // test view
 var app = new Vue({
     el: '#app',
@@ -18,16 +30,7 @@ var vm1 = new Vue({
 var vm2 = new Vue({
   el: '#inv-list',
   data: {
-    parrots: [
-      {
-        name: 'Polly',
-        color: 'blue'
-      },
-      {
-        name: 'Pete',
-        color: 'pink'
-      }
-    ]
+    parrots: parrots
   }
 })
 

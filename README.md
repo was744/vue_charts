@@ -7,3 +7,7 @@
 [Also this](https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance/)
 
 [Fancy Charts](https://www.chartjs.org/docs/latest/getting-started/)
+
+## Todo
+
+Add [tables](https://bootstrap-vue.js.org/docs/components/table/)
