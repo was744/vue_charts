@@ -5,7 +5,12 @@ var inventory =  [
   { name: 'Garfield', animal: 'cat', color: 'orange', sex: 'male', age: 14}
 ]
 
-var tableFields = ['name', 'animal', 'color', 'sex']
+var tableFields = [
+  { key: 'name', sortable: true },
+  { key: 'animal', sortable: true},
+  { key: 'color'},
+  { key: 'sex' }
+]
 
 // test view
 var app = new Vue({

@@ -1,63 +1,65 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Pollys Parrots</title>
-        <!-- Load required Bootstrap and BootstrapVue CSS -->
-        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
-        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
-    </head>
-    <body>
-        <div id="nav">
-            <b-navbar toggleable="lg" type="dark" variant="info">
-                <b-navbar-brand href="#"> {{ title }} </b-navbar-brand>
+<html lang="en">
 
-                <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Pollys Parrots</title>
+    <!-- Load required Bootstrap and BootstrapVue CSS -->
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+</head>
 
-                <b-collapse id="nav-collapse" is-nav>
+<body>
+    <div id="nav">
+        <b-navbar toggleable="lg" type="dark" variant="info">
+            <b-navbar-brand href="#"> {{ title }} </b-navbar-brand>
 
-                    <!-- Right aligned nav items -->
-                    <b-navbar-nav class="ml-auto">
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+            <b-collapse id="nav-collapse" is-nav>
+
+                <!-- Right aligned nav items -->
+                <b-navbar-nav class="ml-auto">
                     <b-nav-item-dropdown right>
                         <!-- Using 'button-content' slot -->
                         <template v-slot:button-content>
-                        <em>Refresh</em>
+                            <em>Refresh</em>
                         </template>
                         <b-dropdown-item href="#">1 min</b-dropdown-item>
                         <b-dropdown-item href="#">5 min</b-dropdown-item>
                     </b-nav-item-dropdown>
-                    </b-navbar-nav>
-                </b-collapse>
-            </b-navbar>
-        </div>
+                </b-navbar-nav>
+            </b-collapse>
+        </b-navbar>
+    </div>
 
-        <div id="table">
-            <b-table striped hover responsive :items="inventory" :fields='tableFields'></b-table>
-        </div>
+    <div id="table">
+        <b-table striped hover responsive stickey-header :items="inventory" :fields='tableFields' primary-key='name'></b-table>
+    </div>
 
-        <div id="app">
-            {{ message }}
-        </div>
+    <div id="app">
+        {{ message }}
+    </div>
 
-        <ul id="inv-list">
-            <li v-for="parrot in parrots">
-                {{ parrot.name }}
-            </li>
-        </ul>
+    <ul id="inv-list">
+        <li v-for="parrot in parrots">
+            {{ parrot.name }}
+        </li>
+    </ul>
 
 
 
-        <!-- chart -->
-        <canvas id="testLine"></canvas>
+    <!-- chart -->
+    <canvas id="testLine"></canvas>
 
-        
-        <!-- SCRIPTS -->
-        <!-- development version, includes helpful console warnings -->
-        <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
-        <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-        <script src='index.js'></script>
-    </body>
+
+    <!-- SCRIPTS -->
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src='index.js'></script>
+</body>
+
 </html>
-
