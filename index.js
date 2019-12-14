@@ -1,14 +1,11 @@
 // init data
-var parrots =  [
-  {
-    name: 'Polly',
-    color: 'blue'
-  },
-  {
-    name: 'Pete',
-    color: 'pink'
-  }
+var inventory =  [
+  { name: 'Polly', animal: 'bird', color: 'blue', sex: 'female', age: 9 },
+  { name: 'Peter', animal: 'fish', color: 'pink', sex: 'male', age: 1 },
+  { name: 'Garfield', animal: 'cat', color: 'orange', sex: 'male', age: 14}
 ]
+
+var tableFields = ['name', 'animal', 'color', 'sex']
 
 // test view
 var app = new Vue({
@@ -30,7 +27,7 @@ var vm1 = new Vue({
 var vm2 = new Vue({
   el: '#inv-list',
   data: {
-    parrots: parrots
+    parrots: inventory
   }
 })
 

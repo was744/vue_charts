@@ -33,7 +33,7 @@
         </div>
 
         <div id="table">
-            <b-table striped hover :items="parrots"></b-table>
+            <b-table striped hover responsive :items="inventory" :fields='tableFields'></b-table>
         </div>
 
         <div id="app">
